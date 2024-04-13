@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Plants</title>
-    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
 </head>
-<body>
+<body class="bg-sky-400">
     <h2>
         {% for item in items %}
             <a href="{% url 'detail' item.id %}">
