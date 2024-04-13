@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plants</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <h2>
+        {% for item in items %}
+            <a href="{% url 'detail' item.id %}">
+                Id: {{item.my_id}}<br>
+                Name: {{item.name}}<br>
+                Price: {{item.price}}<br>
+                Description: {{item.description}}<br>
+            </a>
+        {% endfor %}
+    </h2>
+</body>
+</html>
